@@ -1,4 +1,4 @@
-const resList = [
+let resList = [
 {
 "info": {
 "id": "804071",
@@ -1717,4 +1717,4 @@ const resList = [
 }
 }
 ]
-export default resList
+export default resList;
