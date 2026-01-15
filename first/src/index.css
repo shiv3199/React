@@ -51,8 +51,6 @@
 }
 .filter-btn{
     cursor: pointer;
-    margin: 0 20px 5px ;
-    font-size: 15px;
 }
 .shimmer-cards{
     width: 200px;
@@ -68,4 +66,8 @@
 .login{
     width: 60px;
     cursor: pointer;
+}
+.filter{
+    display: flex;
+    align-items: center;
 }
