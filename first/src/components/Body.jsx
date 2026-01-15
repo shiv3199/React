@@ -27,10 +27,12 @@ const Body = () => {
       <div className="search">
       <input type="text" className="search-bar" value={searchText} onChange={(e)=>{
         setSearchText(e.target.value)
-        console.log(e)
       }}/>
       <button onClick={()=>{
-
+        const searchFilter = filterRes.filter((res)=>{
+          return res.info.name.toLowerCase().includes(searchText.toLowerCase())
+        })
+        setFilterRes(searchFilter);
       }}>Search</button>
       </div>
         <button
