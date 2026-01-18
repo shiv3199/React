@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header h1{
+  text-align: center;
+  margin-top: 10px;
+}
+.search{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.search input{
+  width: 50%;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.search button{
+  background-color: #ffbf00;
+  margin: 5px;
+  width: 90px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+body{
+  background-color: #1f1b4c;
+  color: aliceblue;
+}
+.git-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid;
+  width: 300px;
+  padding: 10px;
+  margin-left: 39%;
+  gap: 15px;
+  border-radius: 5px;
+}
+.git-info img{
+  width: 100px;
+  border-radius: 25px;
+}
