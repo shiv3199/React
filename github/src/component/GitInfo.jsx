@@ -1,21 +1,26 @@
-import { use, useEffect, useState } from "react";
-import Search from "./Search";
-const GitInfo = () => {
-  const [info, setInfo] = useState([]);
+import { useEffect, useState } from "react";
+
+const GitInfo = ({ searchText }) => {
+  const [info, setInfo] = useState({});
 
   useEffect(() => {
+    if (!searchText) return;
     fetchData();
-  }, []);
+  }, [searchText]);
 
   const fetchData = async () => {
-    const data = await fetch("https://api.github.com/users/vikasthakurr");
+    try{
+    const data = await fetch(`https://api.github.com/users/${searchText}`);
+    if(!data.ok) throw new Error ('user not found')
     const json = await data.json();
     setInfo(json);
+    }catch(error){
+
+    }
   };
   const { name, followers, location, avatar_url, public_repos } = info;
   return (
     <>
-      <Search />
       <div className="git-info">
         <img src={avatar_url} alt="photo" />
         <h2>Name: {name}</h2>

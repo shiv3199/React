@@ -1,11 +1,10 @@
-import GitInfo from "./component/GitInfo"
-import Header from "./component/Header"
-import Search from "./component/Search"
+import Body from './component/Body'
+import Header from './component/Header'
 function App() {
   return (
     <>
     <Header/>
-    <GitInfo/>
+    <Body/>
     </>
   )
 }

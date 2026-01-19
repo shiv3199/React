@@ -1,11 +1,13 @@
 import { useState } from "react";
-const Search = ()=>{
-    const[search, setSearch]=useState([])
+const Search = ({setSearchText})=>{
+    const[text, setText]=useState("")
     return(
         <>
         <div className="search">
-        <input type="text" placeholder="Username" value={text}/>
-        <button>Search</button>
+        <input type="text" placeholder="Username" value={text} onChange={(e)=>{
+            setText(e.target.value)
+        }}/>
+        <button onClick={()=>setSearchText(text)}>Search</button>
         </div>
         </>
     )
