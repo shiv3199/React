@@ -15,11 +15,11 @@ const GitInfo = ({ searchText }) => {
     const json = await data.json();
     setInfo(json);
     }catch(error){
-
+      console.log(error)
     }
   };
   const { name, followers, location, avatar_url, public_repos } = info;
-  return (
+  return (!info)?<h1>Loading...</h1>:(
     <>
       <div className="git-info">
         <img src={avatar_url} alt="photo" />

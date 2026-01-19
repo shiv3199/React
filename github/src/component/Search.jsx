@@ -7,7 +7,11 @@ const Search = ({setSearchText})=>{
         <input type="text" placeholder="Username" value={text} onChange={(e)=>{
             setText(e.target.value)
         }}/>
-        <button onClick={()=>setSearchText(text)}>Search</button>
+        <button onClick={()=>{
+            setSearchText(text)
+            setText('')
+        }
+        }>Search</button>
         </div>
         </>
     )
