@@ -18,8 +18,8 @@ const GitInfo = ({ searchText }) => {
       console.log(error)
     }
   };
-  const { name, followers, location, avatar_url, public_repos } = info;
-  return (!info)?<h1>Loading...</h1>:(
+  const { name, followers, location, avatar_url, public_repos,html_url } = info;
+  return !info?(<h1>Loading...</h1>):(
     <>
       <div className="git-info">
         <img src={avatar_url} alt="photo" />
@@ -27,6 +27,7 @@ const GitInfo = ({ searchText }) => {
         <h3>Followers: {followers}</h3>
         <h3>Location: {location}</h3>
         <h3>Repo: {public_repos}</h3>
+        <h3><a href={html_url} target="blank">Full Profile</a></h3>
       </div>
     </>
   );

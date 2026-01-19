@@ -31,6 +31,11 @@ body{
   display: flex;
   justify-content: center;
 }
+a{
+  color: aliceblue;
+  text-decoration: none;
+  cursor: pointer;
+}
 .git-info{
   display: flex;
   justify-content: center;
