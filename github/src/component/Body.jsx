@@ -5,8 +5,10 @@ const Body = ()=>{
     const [searchText, setSearchText]= useState("")
     return(
         <>
+        <div className=''>
         <Search setSearchText={setSearchText}/>
         <GitInfo searchText={searchText}/>
+        </div>
         </>
     )
 }
