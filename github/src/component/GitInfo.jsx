@@ -38,7 +38,7 @@ const GitInfo = ({ searchText }) => {
           <h3>Location: {location}</h3>
           <h3>Repo: {public_repos}</h3>
           <h3>
-            <a href={html_url} target="blank">
+            <a className=" cursor-pointer" href={html_url} target="blank">
               Full Profile
             </a>
           </h3>
